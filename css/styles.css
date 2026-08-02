@@ -289,15 +289,16 @@ p:last-child {
 .hero-brand {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.15rem;
   margin-bottom: 1.35rem;
   animation: rise 0.8s ease both;
 }
 
 .hero-brand img {
-  width: 106px;
-  height: 106px;
+  width: auto;
+  height: 7.5rem;
   object-fit: contain;
+  flex-shrink: 0;
   filter: drop-shadow(0 12px 24px rgba(27, 168, 232, 0.28));
 }
 
@@ -1151,8 +1152,8 @@ p:last-child {
 
 @media (max-width: 560px) {
   .hero-brand img {
-    width: 82px;
-    height: 82px;
+    height: 5.75rem;
+    width: auto;
   }
 
   .app-body {
