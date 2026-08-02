@@ -296,7 +296,7 @@ p:last-child {
 
 .hero-brand img {
   width: auto;
-  height: 7.5rem;
+  height: 9rem;
   object-fit: contain;
   flex-shrink: 0;
   filter: drop-shadow(0 12px 24px rgba(27, 168, 232, 0.28));
@@ -1152,7 +1152,7 @@ p:last-child {
 
 @media (max-width: 560px) {
   .hero-brand img {
-    height: 5.75rem;
+    height: 6.9rem;
     width: auto;
   }
 
