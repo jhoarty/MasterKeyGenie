@@ -336,9 +336,23 @@ p:last-child {
   animation: rise 0.8s ease 0.2s both;
 }
 
+.hero-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-ctas {
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  padding-top: 0.25rem;
+}
+
 .hero-visual {
   position: relative;
   animation: float-in 1s ease 0.15s both;
+  padding-bottom: 2.5rem;
 }
 
 .hero-visual::before {
@@ -1062,6 +1076,12 @@ p:last-child {
   }
 
   .hero-visual {
+    max-width: 560px;
+    padding-bottom: 0;
+    margin-inline: auto;
+  }
+
+  .hero-aside {
     max-width: 560px;
   }
 
