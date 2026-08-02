@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us — Master Key Genie</title>
+    <meta
+      name="description"
+      content="Contact Appfinity LLC about Master Key Genie at support@appfinityllc.com."
+    />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-inner">
+        <a class="brand-lockup" href="index.html" aria-label="Master Key Genie home">
+          <img src="assets/brand-mark.png" alt="" width="42" height="42" />
+          <span>Master Key <span class="genie">Genie</span></span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="site-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="sky-wash">
+      <div class="container page-hero">
+        <h1>Contact Us</h1>
+        <p>
+          We’re here for product questions, support, and feedback on Master Key
+          Genie.
+        </p>
+      </div>
+
+      <div class="container contact-panel">
+        <div class="contact-line">
+          <span>Email</span>
+          <a href="mailto:support@appfinityllc.com">support@appfinityllc.com</a>
+        </div>
+        <div class="contact-line">
+          <span>Company</span>
+          <a href="about.html">Appfinity LLC</a>
+        </div>
+        <div class="contact-line">
+          <span>Get the app</span>
+          <div class="btn-row" style="margin-top: 0.35rem">
+            <a class="btn btn-primary" href="index.html#app-store">Apple Store</a>
+            <a class="btn btn-sky" href="index.html#play-store">Play Store</a>
+          </div>
+        </div>
+        <p style="color: var(--ink-muted); margin-top: 0.5rem">
+          Include your app version and platform (Windows or mobile) when you
+          write—we can help faster with those details.
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="footer-brand" href="index.html">
+            <img src="assets/brand-mark.png" alt="" width="36" height="36" />
+            Master Key Genie
+          </a>
+          <div class="footer-meta">
+            © <span id="year"></span> Appfinity LLC
+          </div>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li>
+            <a href="mailto:support@appfinityllc.com">support@appfinityllc.com</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/links.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

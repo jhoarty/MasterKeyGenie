@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us — Master Key Genie</title>
+    <meta
+      name="description"
+      content="Master Key Genie is built by Appfinity LLC to make master key systems design friendly, accurate, and secure—on Windows and mobile."
+    />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-inner">
+        <a class="brand-lockup" href="index.html" aria-label="Master Key Genie home">
+          <img src="assets/brand-mark.png" alt="" width="42" height="42" />
+          <span>Master Key <span class="genie">Genie</span></span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="site-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About Us</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="sky-wash">
+      <div class="container page-hero">
+        <h1>About Us</h1>
+        <p>
+          Master Key Genie is software for locksmiths who want master key systems
+          that are accurate without being exhausting—built and supported by
+          Appfinity LLC.
+        </p>
+      </div>
+
+      <div class="container prose">
+        <h2>Our mission</h2>
+        <p>
+          Master keying should feel like a craft you control—not a tangle of
+          spreadsheets and second guesses. We built Master Key Genie so you can
+          design systems with confidence at the bench, take them into the field
+          on your phone, and keep every device aligned when you are back online.
+        </p>
+
+        <h2>What we believe</h2>
+        <ul>
+          <li>
+            <strong>Friendly beats clever.</strong> Clear layouts, plain
+            language, and visuals that show the cylinder—not just numbers in a
+            grid.
+          </li>
+          <li>
+            <strong>Accuracy is non‑negotiable.</strong> Bittings, pinning, and
+            access relationships have to be right. The product is built around
+            that discipline.
+          </li>
+          <li>
+            <strong>Your data stays yours.</strong> Offline-first storage,
+            encrypted sync, and row-level security are part of the product—not
+            an afterthought.
+          </li>
+        </ul>
+
+        <h2>Appfinity LLC</h2>
+        <p>
+          Master Key Genie is developed by Appfinity LLC. We build practical
+          tools for real trades—software that shows up when the network does
+          not, and that treats job-site data with the care it deserves.
+        </p>
+        <p>
+          Questions, feedback, or partnership ideas? Reach us anytime at
+          <a href="mailto:support@appfinityllc.com">support@appfinityllc.com</a>.
+        </p>
+
+        <p style="margin-top: 2rem">
+          <a class="btn btn-primary" href="contact.html">Contact Us</a>
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="footer-brand" href="index.html">
+            <img src="assets/brand-mark.png" alt="" width="36" height="36" />
+            Master Key Genie
+          </a>
+          <div class="footer-meta">
+            © <span id="year"></span> Appfinity LLC
+          </div>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li>
+            <a href="mailto:support@appfinityllc.com">support@appfinityllc.com</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/links.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
