@@ -14,6 +14,13 @@
         a.href = store.playStore;
       });
   }
+  if (store.windowsMsi) {
+    document
+      .querySelectorAll('a[href="#windows-msi"], a[href="index.html#windows-msi"]')
+      .forEach((a) => {
+        a.href = store.windowsMsi;
+      });
+  }
 
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");

@@ -2,3 +2,4 @@
 /*.map
 .DS_Store
 Thumbs.db
+.release-staging/

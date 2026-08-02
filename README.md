@@ -33,7 +33,7 @@ No build step is required; Pages will publish the static files as-is.
 
 ## Before you launch
 
-1. **Store links** — Edit `js/links.js` and set `appStore` / `playStore` to your real Apple App Store and Google Play URLs.
+1. **Store links** — Edit `js/links.js` and set `appStore` / `playStore` to your real Apple App Store and Google Play URLs. Update `windowsMsi` when you publish a new GitHub Release build.
 2. **Screenshots** — Live shots live in `assets/screenshots/` and are used on the homepage hero + gallery.
 3. **Privacy** — Review `privacy.html` with counsel if needed; it reflects the product’s offline + encrypted sync design.
 
