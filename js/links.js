@@ -3,5 +3,5 @@ window.MKG_LINKS = {
   appStore: "#app-store",
   playStore: "#play-store",
   windowsMsi:
-    "https://github.com/jhoarty/MasterKeyGenie/releases/latest/download/MasterKeyGenie-0.1.9-x64.msi",
+    "https://github.com/jhoarty/MasterKeyGenie/releases/latest/download/MasterKeyGenie-0.1.10-x64.msi",
 };
