@@ -933,7 +933,7 @@ p:last-child {
   border-bottom: 1px solid var(--line);
 }
 
-.contact-line span {
+.contact-line > span {
   font-family: var(--font-display);
   font-size: 0.8rem;
   font-weight: 700;
@@ -942,7 +942,7 @@ p:last-child {
   color: var(--sky);
 }
 
-.contact-line a {
+.contact-line > a {
   font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 700;
@@ -950,8 +950,19 @@ p:last-child {
   text-decoration: none;
 }
 
-.contact-line a:hover {
+.contact-line > a:hover {
   color: var(--sky);
+}
+
+/* Keep store CTAs matching the homepage (do not inherit contact-line link styles) */
+.contact-line .btn-row {
+  margin-top: 0.35rem;
+}
+
+.contact-line .hero-download {
+  text-align: left;
+  margin: 0.85rem 0 0;
+  animation: none;
 }
 
 /* —— Footer —— */
