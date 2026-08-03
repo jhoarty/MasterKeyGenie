@@ -302,6 +302,18 @@ p:last-child {
   filter: drop-shadow(0 12px 24px rgba(27, 168, 232, 0.28));
 }
 
+.hero-brand--lockup {
+  display: block;
+  margin-bottom: 1.1rem;
+}
+
+.hero-brand--lockup img {
+  display: block;
+  width: min(100%, 22rem);
+  height: auto;
+  filter: drop-shadow(0 16px 32px rgba(6, 23, 61, 0.12));
+}
+
 .hero-wordmark {
   font-family: var(--font-display);
   font-weight: 800;
@@ -1165,6 +1177,11 @@ p:last-child {
   .hero-brand img {
     height: 6.9rem;
     width: auto;
+  }
+
+  .hero-brand--lockup img {
+    width: min(100%, 16.5rem);
+    height: auto;
   }
 
   .app-body {
