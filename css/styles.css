@@ -310,8 +310,8 @@ p:last-child {
 .hero-brand--lockup img {
   display: block;
   width: auto;
-  height: 22rem;
-  max-width: min(100%, 22rem);
+  height: 26.4rem;
+  max-width: min(100%, 26.4rem);
   object-fit: contain;
   filter: drop-shadow(0 16px 32px rgba(6, 23, 61, 0.12));
 }
@@ -1183,8 +1183,8 @@ p:last-child {
 
   .hero-brand--lockup img {
     width: auto;
-    height: 16.5rem;
-    max-width: min(100%, 16.5rem);
+    height: 19.8rem;
+    max-width: min(100%, 19.8rem);
     object-fit: contain;
   }
 
