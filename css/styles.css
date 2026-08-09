@@ -1,4 +1,4 @@
-/* Master Key Genie — marketing site
+﻿/* Master Key Genie â€” marketing site
    Brand: navy + sky blue + gold (from product mark) */
 
 :root {
@@ -82,7 +82,7 @@ p:last-child {
   margin-inline: auto;
 }
 
-/* —— Atmosphere —— */
+/* â€”â€” Atmosphere â€”â€” */
 .sky-wash {
   background:
     radial-gradient(120% 80% at 12% -10%, rgba(59, 196, 245, 0.35), transparent 55%),
@@ -90,7 +90,7 @@ p:last-child {
     linear-gradient(180deg, #dff3fc 0%, var(--surface) 58%, #eef6fb 100%);
 }
 
-/* —— Nav —— */
+/* â€”â€” Nav â€”â€” */
 .site-header {
   position: sticky;
   top: 0;
@@ -183,7 +183,7 @@ p:last-child {
   border-radius: 2px;
 }
 
-/* —— Buttons —— */
+/* â€”â€” Buttons â€”â€” */
 .btn-row {
   display: flex;
   flex-wrap: wrap;
@@ -272,7 +272,7 @@ p:last-child {
   font-weight: 700;
 }
 
-/* —— Hero —— */
+/* â€”â€” Hero â€”â€” */
 .hero {
   position: relative;
   padding: 2.5rem 0 4.5rem;
@@ -309,8 +309,10 @@ p:last-child {
 
 .hero-brand--lockup img {
   display: block;
-  width: min(100%, 22rem);
-  height: auto;
+  width: auto;
+  height: 22rem;
+  max-width: min(100%, 22rem);
+  object-fit: contain;
   filter: drop-shadow(0 16px 32px rgba(6, 23, 61, 0.12));
 }
 
@@ -499,7 +501,7 @@ p:last-child {
   object-position: top center;
 }
 
-/* —— Product UI mock (screenshot stand-ins) —— */
+/* â€”â€” Product UI mock (screenshot stand-ins) â€”â€” */
 .app-ui {
   font-family: "Segoe UI", system-ui, sans-serif;
   font-size: 11px;
@@ -716,7 +718,7 @@ p:last-child {
   font-weight: 600;
 }
 
-/* —— Sections —— */
+/* â€”â€” Sections â€”â€” */
 .section {
   padding: 4.5rem 0;
 }
@@ -747,7 +749,7 @@ p:last-child {
   font-size: 1.08rem;
 }
 
-/* Features — not card-heavy: open rows with icons */
+/* Features â€” not card-heavy: open rows with icons */
 .feature-rail {
   display: grid;
   gap: 0;
@@ -891,7 +893,7 @@ p:last-child {
   color: var(--sky-bright);
 }
 
-/* —— Interior pages —— */
+/* â€”â€” Interior pages â€”â€” */
 .page-hero {
   padding: 3rem 0 2rem;
 }
@@ -977,7 +979,7 @@ p:last-child {
   animation: none;
 }
 
-/* —— Footer —— */
+/* â€”â€” Footer â€”â€” */
 .site-footer {
   border-top: 1px solid var(--line);
   background: var(--white);
@@ -1041,7 +1043,7 @@ p:last-child {
   color: var(--navy);
 }
 
-/* —— Motion helpers —— */
+/* â€”â€” Motion helpers â€”â€” */
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -1113,7 +1115,7 @@ p:last-child {
   }
 }
 
-/* —— Responsive —— */
+/* â€”â€” Responsive â€”â€” */
 @media (max-width: 900px) {
   .hero-grid,
   .shot-grid {
@@ -1180,8 +1182,10 @@ p:last-child {
   }
 
   .hero-brand--lockup img {
-    width: min(100%, 16.5rem);
-    height: auto;
+    width: auto;
+    height: 16.5rem;
+    max-width: min(100%, 16.5rem);
+    object-fit: contain;
   }
 
   .app-body {
