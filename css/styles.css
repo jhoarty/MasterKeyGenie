@@ -1005,8 +1005,9 @@ p:last-child {
 }
 
 .footer-brand img {
-  width: 36px;
-  height: 36px;
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
 }
 
 .footer-meta {
