@@ -1,4 +1,4 @@
-﻿/* Master Key Genie â€” marketing site
+﻿/* Master Key Genie — marketing site
    Brand: navy + sky blue + gold (from product mark) */
 
 :root {
@@ -82,7 +82,7 @@ p:last-child {
   margin-inline: auto;
 }
 
-/* â€”â€” Atmosphere â€”â€” */
+/* —— Atmosphere —— */
 .sky-wash {
   background:
     radial-gradient(120% 80% at 12% -10%, rgba(59, 196, 245, 0.35), transparent 55%),
@@ -90,7 +90,7 @@ p:last-child {
     linear-gradient(180deg, #dff3fc 0%, var(--surface) 58%, #eef6fb 100%);
 }
 
-/* â€”â€” Nav â€”â€” */
+/* —— Nav —— */
 .site-header {
   position: sticky;
   top: 0;
@@ -183,7 +183,7 @@ p:last-child {
   border-radius: 2px;
 }
 
-/* â€”â€” Buttons â€”â€” */
+/* —— Buttons —— */
 .btn-row {
   display: flex;
   flex-wrap: wrap;
@@ -272,7 +272,7 @@ p:last-child {
   font-weight: 700;
 }
 
-/* â€”â€” Hero â€”â€” */
+/* —— Hero —— */
 .hero {
   position: relative;
   padding: 2.5rem 0 4.5rem;
@@ -501,7 +501,7 @@ p:last-child {
   object-position: top center;
 }
 
-/* â€”â€” Product UI mock (screenshot stand-ins) â€”â€” */
+/* —— Product UI mock (screenshot stand-ins) —— */
 .app-ui {
   font-family: "Segoe UI", system-ui, sans-serif;
   font-size: 11px;
@@ -718,7 +718,7 @@ p:last-child {
   font-weight: 600;
 }
 
-/* â€”â€” Sections â€”â€” */
+/* —— Sections —— */
 .section {
   padding: 4.5rem 0;
 }
@@ -749,7 +749,7 @@ p:last-child {
   font-size: 1.08rem;
 }
 
-/* Features â€” not card-heavy: open rows with icons */
+/* Features — not card-heavy: open rows with icons */
 .feature-rail {
   display: grid;
   gap: 0;
@@ -893,7 +893,7 @@ p:last-child {
   color: var(--sky-bright);
 }
 
-/* â€”â€” Interior pages â€”â€” */
+/* —— Interior pages —— */
 .page-hero {
   padding: 3rem 0 2rem;
 }
@@ -979,7 +979,7 @@ p:last-child {
   animation: none;
 }
 
-/* â€”â€” Footer â€”â€” */
+/* —— Footer —— */
 .site-footer {
   border-top: 1px solid var(--line);
   background: var(--white);
@@ -1044,7 +1044,7 @@ p:last-child {
   color: var(--navy);
 }
 
-/* â€”â€” Motion helpers â€”â€” */
+/* —— Motion helpers —— */
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -1116,7 +1116,7 @@ p:last-child {
   }
 }
 
-/* â€”â€” Responsive â€”â€” */
+/* —— Responsive —— */
 @media (max-width: 900px) {
   .hero-grid,
   .shot-grid {
