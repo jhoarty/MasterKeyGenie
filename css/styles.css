@@ -364,28 +364,6 @@ p:last-child {
   padding-top: 0.25rem;
 }
 
-.hero-download {
-  text-align: center;
-  margin: 0;
-  position: relative;
-  z-index: 3;
-  animation: rise 0.8s ease 0.28s both;
-}
-
-.hero-download a {
-  font-family: var(--font-display);
-  font-weight: 650;
-  font-size: 1.05rem;
-  color: var(--navy);
-  text-decoration: underline;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 0.22em;
-}
-
-.hero-download a:hover {
-  color: var(--sky);
-}
-
 .hero-visual {
   position: relative;
   animation: float-in 1s ease 0.15s both;
@@ -878,21 +856,6 @@ p:last-child {
   color: #fff;
 }
 
-.cta-download {
-  margin: 1.25rem 0 0;
-}
-
-.cta-download a {
-  font-family: var(--font-display);
-  font-weight: 650;
-  color: #fff;
-  text-underline-offset: 0.22em;
-}
-
-.cta-download a:hover {
-  color: var(--sky-bright);
-}
-
 /* —— Interior pages —— */
 .page-hero {
   padding: 3rem 0 2rem;
@@ -971,12 +934,6 @@ p:last-child {
 /* Keep store CTAs matching the homepage (do not inherit contact-line link styles) */
 .contact-line .btn-row {
   margin-top: 0.35rem;
-}
-
-.contact-line .hero-download {
-  text-align: left;
-  margin: 0.85rem 0 0;
-  animation: none;
 }
 
 /* —— Footer —— */
