@@ -279,6 +279,16 @@ p:last-child {
   overflow: clip;
 }
 
+.hero-banner {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 2.25rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
