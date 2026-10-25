@@ -1044,6 +1044,77 @@ p:last-child {
   color: var(--navy);
 }
 
+
+/* —— Yearly plans —— */
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.page-plans {
+  padding-bottom: 4.5rem;
+}
+
+.plan-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  background: var(--white);
+  border: 1px solid rgba(201, 216, 230, 0.9);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem 1.35rem 1.35rem;
+}
+
+.plan-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.1rem;
+}
+
+.plan-people {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+.plan-price {
+  margin: 0.45rem 0 1rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--navy);
+}
+
+.plan-price span {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--ink-muted);
+}
+
+.plan-card .btn {
+  margin-top: auto;
+  width: 100%;
+}
+
+.pricing-status {
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.15rem;
+  border-radius: var(--radius);
+  background: var(--gold-soft);
+  color: var(--navy);
+  border: 1px solid rgba(240, 160, 32, 0.45);
+}
+
+.pricing-status[hidden] {
+  display: none;
+}
+
 /* —— Motion helpers —— */
 .reveal {
   opacity: 0;
@@ -1119,7 +1190,8 @@ p:last-child {
 /* —— Responsive —— */
 @media (max-width: 900px) {
   .hero-grid,
-  .shot-grid {
+  .shot-grid,
+  .plan-grid {
     grid-template-columns: 1fr;
   }
 

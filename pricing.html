@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pricing &mdash; Master Key Genie</title>
+    <meta
+      name="description"
+      content="Yearly Master Key Genie licenses for a shop, a crew, or an organization. One license covers the Windows software and the phone apps."
+    />
+    <meta
+      name="keywords"
+      content="locksmith, master key, bitting, pinning, keying, master keying, master key systems, allegion, yale, arrow, best, schlage, corbin russwin, dexter, kwikset, sargent, weiser"
+    />
+    <link rel="icon" href="assets/favicon.png?v=20260808" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=6" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-inner">
+        <a class="brand-lockup" href="index.html" aria-label="Master Key Genie home">
+          <img src="assets/brand-mark.png?v=20260808" alt="" width="58" height="58" />
+          <span>Master Key <span class="genie">Genie</span></span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="site-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pricing.html" aria-current="page">Pricing</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="sky-wash" id="pricing">
+      <div class="container page-hero">
+        <h1>Plans for the people who sign in.</h1>
+        <p>
+          One license covers the Windows software and the phone apps. Billed
+          yearly. A person is someone who can sign in, not a device.
+        </p>
+      </div>
+
+      <div class="container page-plans">
+        <p class="pricing-status" id="pricing-notice" role="status">
+          Online checkout is not connected yet. You have not been charged. The
+          prices below are the yearly plans.
+        </p>
+        <div class="plan-grid">
+
+          <article class="plan-card">
+            <h2>Shop</h2>
+            <p class="plan-people">1&ndash;5 people</p>
+            <p class="plan-price">$399<span>/year</span></p>
+            <button class="btn btn-primary" type="button" data-buy="shop_annual">
+              Buy
+            </button>
+          </article>
+
+          <article class="plan-card">
+            <h2>Crew</h2>
+            <p class="plan-people">6&ndash;10 people</p>
+            <p class="plan-price">$799<span>/year</span></p>
+            <button class="btn btn-primary" type="button" data-buy="crew_annual">
+              Buy
+            </button>
+          </article>
+
+          <article class="plan-card">
+            <h2>Organization</h2>
+            <p class="plan-people">Unlimited people</p>
+            <p class="plan-price">$1,499<span>/year</span></p>
+            <button class="btn btn-primary" type="button" data-buy="organization_annual">
+              Buy
+            </button>
+          </article>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="footer-brand" href="index.html">
+            <img src="assets/brand-mark.png?v=20260808" alt="" width="58" height="58" />
+            Master Key Genie
+          </a>
+          <div class="footer-meta">
+            &copy; <span id="year"></span> Appfinity LLC
+          </div>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li>
+            <a href="mailto:support@appfinityllc.com">support@appfinityllc.com</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/links.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pricing.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

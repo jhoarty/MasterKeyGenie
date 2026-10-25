@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=5" />
+    <link rel="stylesheet" href="css/styles.css?v=6" />
   </head>
   <body>
     <header class="site-header">
@@ -38,6 +38,7 @@
         </button>
         <ul class="nav-links" id="site-nav">
           <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="privacy.html">Privacy</a></li>
           <li><a href="contact.html">Contact Us</a></li>
@@ -133,6 +134,9 @@
               <a href="#windows-msi" id="cta-windows-msi" download>
                 Download the Windows msi now
               </a>
+            </p>
+            <p class="hero-download">
+              <a href="#pricing">See yearly plans</a>
             </p>
           </div>
         </div>
@@ -285,6 +289,54 @@
         </div>
       </section>
 
+
+      <section class="section" id="pricing">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Yearly license</span>
+            <h2>Plans for the people who sign in.</h2>
+            <p>
+              One license covers the Windows software and the phone apps. Billed
+              yearly. A person is someone who can sign in, not a device.
+            </p>
+          </div>
+          <p class="pricing-status" id="pricing-notice" role="status">
+            Online checkout is not connected yet. You have not been charged. The
+            prices below are the yearly plans.
+          </p>
+          <div class="plan-grid">
+
+          <article class="plan-card">
+            <h2>Shop</h2>
+            <p class="plan-people">1&ndash;5 people</p>
+            <p class="plan-price">$399<span>/year</span></p>
+            <button class="btn btn-primary" type="button" data-buy="shop_annual">
+              Buy
+            </button>
+          </article>
+
+          <article class="plan-card">
+            <h2>Crew</h2>
+            <p class="plan-people">6&ndash;10 people</p>
+            <p class="plan-price">$799<span>/year</span></p>
+            <button class="btn btn-primary" type="button" data-buy="crew_annual">
+              Buy
+            </button>
+          </article>
+
+          <article class="plan-card">
+            <h2>Organization</h2>
+            <p class="plan-people">Unlimited people</p>
+            <p class="plan-price">$1,499<span>/year</span></p>
+            <button class="btn btn-primary" type="button" data-buy="organization_annual">
+              Buy
+            </button>
+          </article>
+
+          </div>
+        </div>
+      </section>
+
       <section class="cta-band" id="get-app">
         <div class="container">
           <h2 class="reveal">Ready to make master keying feel easy?</h2>
@@ -338,6 +390,7 @@
           </div>
         </div>
         <ul class="footer-nav">
+          <li><a href="pricing.html">Pricing</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="privacy.html">Privacy</a></li>
           <li><a href="contact.html">Contact Us</a></li>
@@ -350,6 +403,7 @@
 
     <script src="js/links.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/pricing.js"></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
