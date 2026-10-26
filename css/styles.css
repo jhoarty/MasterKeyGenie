@@ -140,7 +140,8 @@ p:last-child {
   line-height: 1.15;
 }
 
-.brand-lockup .genie {
+.brand-lockup .genie,
+.footer-brand .genie {
   color: var(--sky);
 }
 
