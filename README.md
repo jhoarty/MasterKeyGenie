@@ -9,7 +9,7 @@ Static marketing website for **Master Key Genie** (Appfinity LLC). Designed for 
 | `index.html` | Homepage — hero, features, product visuals, store CTAs |
 | `about.html` | About Us |
 | `privacy.html` | Privacy Policy |
-| `contact.html` | Contact (`support@appfinityllc.com`) |
+| `contact.html` | Contact (`support@masterkeygenie.com`) |
 
 ## Local preview
 
