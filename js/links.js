@@ -3,7 +3,7 @@ window.MKG_LINKS = {
   appStore: "#app-store",
   playStore: "#play-store",
   windowsMsi:
-    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.22/MasterKeyGenie-0.1.22-x64.msi",
+    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.23/MasterKeyGenie-0.1.23-x64.msi",
   /*
    * Production RevenueCat Web Purchase Link only.
    * Funnels -> Purchase Links -> Share URL.
