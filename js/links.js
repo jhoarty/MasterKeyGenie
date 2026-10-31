@@ -3,7 +3,7 @@ window.MKG_LINKS = {
   appStore: "#app-store",
   playStore: "#play-store",
   windowsMsi:
-    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.25/MasterKeyGenie-0.1.25-x64.msi",
+    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.26/MasterKeyGenie-0.1.26-x64.msi",
   /*
    * Stripe Checkout is created by the Supabase function. The function holds
    * the Stripe secret. The anon key is the public client key, same as the apps.
