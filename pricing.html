@@ -19,7 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=8" />
+    <link rel="stylesheet" href="css/styles.css?v=12" />
   </head>
   <body>
     <header class="site-header">
@@ -52,12 +52,25 @@
       <div class="container page-hero">
         <h1>Plans for the people who sign in.</h1>
         <p>
-          One license covers the Windows software and the phone apps. Billed
-          yearly. One sign-in per locksmith.
+          One license covers the Windows software and the phone apps. One
+          payment. The year starts when the shop redeems the key. One sign-in
+          per locksmith.
         </p>
       </div>
 
       <div class="container page-plans">
+        <div class="license-qty">
+          <label for="license-quantity">Quantity</label>
+          <input
+            id="license-quantity"
+            type="number"
+            min="1"
+            max="500"
+            value="1"
+            inputmode="numeric"
+          />
+          <p>Each key activates one shop. The year starts when that shop redeems it.</p>
+        </div>
         <p class="pricing-status" id="pricing-notice" role="status">
           Online checkout is not connected yet. You have not been charged. The
           prices below are the yearly plans.

@@ -5,14 +5,13 @@ window.MKG_LINKS = {
   windowsMsi:
     "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.25/MasterKeyGenie-0.1.25-x64.msi",
   /*
-   * Production RevenueCat Web Purchase Link only.
-   * Funnels -> Purchase Links -> Share URL.
-   * Shape: https://pay.rev.cat/<id>/
-   * Do not paste the sandbox URL. Do not append app_user_id.
-   * Buy appends package_id=shop_annual, crew_annual, or organization_annual
-   * and hide_back_button=true.
-   * This site has no sign-in. Turn on Redemption Links in the web config,
-   * or a visit without an app user id returns RevenueCat's 404.
+   * Stripe Checkout is created by the Supabase function. The function holds
+   * the Stripe secret. The anon key is the public client key, same as the apps.
    */
-  revenueCatPurchaseLink: "https://pay.rev.cat/bvwykjqsahqmmjwr/",
+  licenseCheckoutUrl:
+    "https://uwlpgnlcdvysuaidvywk.supabase.co/functions/v1/create-license-checkout",
+  licenseKeysUrl:
+    "https://uwlpgnlcdvysuaidvywk.supabase.co/functions/v1/license-keys-for-session",
+  supabaseAnonKey:
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV3bHBnbmxjZHZ5c3VhaWR2eXdrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU0OTQ2MTgsImV4cCI6MjEwMTA3MDYxOH0.Dsp5bBogC6otWjWJaNNlmMOwnD6007lvibyoL7vwh_A",
 };

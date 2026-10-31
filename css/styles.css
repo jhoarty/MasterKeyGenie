@@ -1324,6 +1324,49 @@ p:last-child {
   display: none;
 }
 
+.license-qty {
+  margin: 0 0 1.25rem;
+}
+
+.license-qty label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.license-qty input {
+  width: 8rem;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  font: inherit;
+  font-weight: 500;
+}
+
+.license-qty p {
+  margin: 0.55rem 0 0;
+  max-width: 36rem;
+  color: var(--ink-muted);
+}
+
+.license-keys {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.license-keys li {
+  margin: 0 0 0.5rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid var(--line, #d5d0c6);
+  font-family: ui-monospace, Consolas, monospace;
+  letter-spacing: 0.04em;
+}
+
 /* —— Motion helpers —— */
 .reveal {
   opacity: 0;

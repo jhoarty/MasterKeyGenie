@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>License keys &mdash; Master Key Genie</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="assets/favicon.png?v=20260808" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=12" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-inner">
+        <a class="brand-lockup" href="index.html" aria-label="Master Key Genie home">
+          <img src="assets/brand-mark.png?v=20260808" alt="" width="58" height="58" />
+          <span>Master Key <span class="genie">Genie</span></span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="site-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="sky-wash">
+      <div class="container page-hero">
+        <h1>Your license keys</h1>
+        <p id="license-lead">
+          Payment received. The keys appear here and in the receipt email.
+        </p>
+        <p id="license-status" role="status">Loading the keys from this checkout…</p>
+        <ul class="license-keys" id="license-keys"></ul>
+        <p>
+          Enter one key in the phone app under Redeem, or on Windows under Plans.
+          It activates one shop. The year starts at that moment. Invite locksmiths
+          after that, whenever they are in the office. A key on the shelf does not age.
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="footer-brand" href="index.html">
+            <img src="assets/brand-mark.png?v=20260808" alt="" width="58" height="58" />
+            <span>Master Key <span class="genie">Genie</span></span>
+          </a>
+          <div class="footer-meta">
+            &copy; <span id="year"></span> Appfinity LLC
+          </div>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li>
+            <a href="mailto:support@masterkeygenie.com">support@masterkeygenie.com</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/links.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      (function () {
+        var status = document.getElementById("license-status");
+        var list = document.getElementById("license-keys");
+        var params = new URLSearchParams(window.location.search);
+        var sessionId = params.get("session_id") || "";
+        var keysUrl = (window.MKG_LINKS && window.MKG_LINKS.licenseKeysUrl) || "";
+        var anonKey = (window.MKG_LINKS && window.MKG_LINKS.supabaseAnonKey) || "";
+        var attempts = 0;
+
+        function say(message) {
+          status.textContent = message;
+        }
+
+        if (!sessionId || !keysUrl || !anonKey) {
+          say("This page needs the checkout session from the receipt.");
+          return;
+        }
+
+        function poll() {
+          attempts += 1;
+          fetch(keysUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              apikey: anonKey,
+              Authorization: "Bearer " + anonKey,
+            },
+            body: JSON.stringify({ sessionId: sessionId }),
+          })
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (body) {
+              var keys = (body && body.keys) || [];
+              if (keys.length) {
+                list.innerHTML = "";
+                keys.forEach(function (key) {
+                  var item = document.createElement("li");
+                  item.textContent = key;
+                  list.appendChild(item);
+                });
+                say(
+                  keys.length === 1
+                    ? "Save this key. It is also in the receipt email."
+                    : "Save these keys. They are also in the receipt email.",
+                );
+                return;
+              }
+              if (attempts >= 12) {
+                say(
+                  "The keys are still being prepared. Check the receipt email in a minute, or refresh this page.",
+                );
+                return;
+              }
+              window.setTimeout(poll, 2500);
+            })
+            .catch(function () {
+              if (attempts >= 12) {
+                say("The keys could not be loaded. Check the receipt email.");
+                return;
+              }
+              window.setTimeout(poll, 2500);
+            });
+        }
+
+        poll();
+      })();
+    </script>
+  </body>
+</html>

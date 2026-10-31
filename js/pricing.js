@@ -1,53 +1,79 @@
 (() => {
   const notice = document.getElementById("pricing-notice");
+  const checkoutUrl = String(
+    (window.MKG_LINKS && window.MKG_LINKS.licenseCheckoutUrl) || "",
+  ).trim();
+  const anonKey = String(
+    (window.MKG_LINKS && window.MKG_LINKS.supabaseAnonKey) || "",
+  ).trim();
+  const plans = {
+    shop_annual: "shop",
+    crew_annual: "crew",
+    organization_annual: "organization",
+  };
 
-  function purchaseUrl(packageId) {
-    const raw = (window.MKG_LINKS && window.MKG_LINKS.revenueCatPurchaseLink) || "";
-    const trimmed = String(raw).trim();
-    if (!trimmed) return null;
-
-    let url;
-    try {
-      url = new URL(trimmed);
-    } catch {
-      return null;
-    }
-
-    const sandbox = /sandbox/i.test(`${url.pathname}${url.search}`);
-    if (url.protocol !== "https:" || url.hostname !== "pay.rev.cat" || sandbox) {
-      return null;
-    }
-
-    url.searchParams.set("package_id", packageId);
-    url.searchParams.set("hide_back_button", "true");
-    return url.toString();
-  }
-
-  function showNotConnected() {
+  function showStatus(message) {
     if (!notice) return;
     notice.hidden = false;
-    notice.textContent =
-      "Online checkout is not connected yet. You have not been charged. The prices below are the yearly plans.";
+    notice.textContent = message;
   }
 
   const buttons = document.querySelectorAll("[data-buy]");
-  let ready = buttons.length > 0;
+  if (!checkoutUrl || !anonKey || buttons.length === 0) {
+    showStatus(
+      "Online checkout is not connected yet. You have not been charged. The prices below are the yearly plans.",
+    );
+    return;
+  }
+  if (notice) notice.hidden = true;
 
   buttons.forEach((button) => {
-    const packageId = button.getAttribute("data-buy");
-    const href = packageId ? purchaseUrl(packageId) : null;
-    if (!href) ready = false;
-
     button.addEventListener("click", () => {
-      const target = packageId ? purchaseUrl(packageId) : null;
-      if (!target) {
-        showNotConnected();
+      const tier = plans[button.getAttribute("data-buy")];
+      const quantityInput = document.getElementById("license-quantity");
+      const quantity = quantityInput ? Number(quantityInput.value) : 1;
+      if (!tier) return;
+      if (!Number.isFinite(quantity) || quantity < 1 || quantity > 500) {
+        showStatus("Quantity must be from 1 to 500. You have not been charged.");
         return;
       }
-      window.location.assign(target);
+
+      buttons.forEach((item) => {
+        item.disabled = true;
+      });
+      fetch(checkoutUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: anonKey,
+          Authorization: `Bearer ${anonKey}`,
+        },
+        body: JSON.stringify({ tier, quantity: Math.floor(quantity) }),
+      })
+        .then((response) =>
+          response.json().then((body) => ({ ok: response.ok, body })),
+        )
+        .then((result) => {
+          if (result.ok && result.body && result.body.url) {
+            window.location.assign(result.body.url);
+            return;
+          }
+          buttons.forEach((item) => {
+            item.disabled = false;
+          });
+          showStatus(
+            (result.body && result.body.error) ||
+              "Online checkout is not connected yet. You have not been charged.",
+          );
+        })
+        .catch(() => {
+          buttons.forEach((item) => {
+            item.disabled = false;
+          });
+          showStatus(
+            "Online checkout is not connected yet. You have not been charged.",
+          );
+        });
     });
   });
-
-  if (!ready) showNotConnected();
-  else if (notice) notice.hidden = true;
 })();
