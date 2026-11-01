@@ -1,7 +1,8 @@
 /* Store & download URLs — update these when apps / builds change */
 window.MKG_LINKS = {
   appStore: "#app-store",
-  playStore: "#play-store",
+  playStore:
+    "https://play.google.com/store/apps/details?id=com.masterkeygenie.app&pcampaignid=web_share",
   windowsMsi:
     "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.27/MasterKeyGenie-0.1.27-x64.msi",
   /*
