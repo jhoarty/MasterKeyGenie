@@ -11,6 +11,8 @@ window.MKG_LINKS = {
    */
   licenseCheckoutUrl:
     "https://uwlpgnlcdvysuaidvywk.supabase.co/functions/v1/create-license-checkout",
+  lockmastersCheckoutUrl:
+    "https://uwlpgnlcdvysuaidvywk.supabase.co/functions/v1/create-lockmasters-checkout",
   licenseKeysUrl:
     "https://uwlpgnlcdvysuaidvywk.supabase.co/functions/v1/license-keys-for-session",
   supabaseAnonKey:
