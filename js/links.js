@@ -1,6 +1,6 @@
 /* Store & download URLs — update these when apps / builds change */
 window.MKG_LINKS = {
-  appStore: "#app-store",
+  appStore: "https://apps.apple.com/app/master-key-genie/id6826968898",
   playStore:
     "https://play.google.com/store/apps/details?id=com.masterkeygenie.app&pcampaignid=web_share",
   windowsMsi:
