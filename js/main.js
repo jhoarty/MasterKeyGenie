@@ -21,6 +21,13 @@
         a.href = store.windowsMsi;
       });
   }
+  if (store.macDmg) {
+    document
+      .querySelectorAll('a[href="#mac-dmg"], a[href="index.html#mac-dmg"]')
+      .forEach((a) => {
+        a.href = store.macDmg;
+      });
+  }
 
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
