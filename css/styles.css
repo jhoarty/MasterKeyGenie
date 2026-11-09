@@ -594,6 +594,77 @@ p:last-child {
   color: var(--sky);
 }
 
+.platform-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+  z-index: 3;
+  animation: rise 0.8s ease 0.28s both;
+}
+
+.platform-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-size: 0.95rem;
+  line-height: 1.1;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  border: 2px solid rgba(11, 37, 69, 0.16);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--navy);
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(11, 37, 69, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.platform-download:hover {
+  transform: translateY(-2px);
+  background: var(--white);
+  color: var(--navy);
+  border-color: var(--sky);
+  text-decoration: none;
+}
+
+.platform-download svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+}
+
+.cta-band .platform-downloads {
+  justify-content: flex-start;
+  animation: none;
+  margin-top: 1.25rem;
+}
+
+.cta-band .platform-download {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: none;
+}
+
+.cta-band .platform-download:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: var(--sky-bright);
+}
+
+.contact-line .platform-downloads {
+  justify-content: flex-start;
+  animation: none;
+  margin: 0.85rem 0 0;
+}
+
 .hero-visual {
   position: relative;
   animation: float-in 1s ease 0.15s both;
@@ -1566,7 +1637,8 @@ p:last-child {
     display: none;
   }
 
-  .btn {
+  .btn,
+  .platform-download {
     width: 100%;
   }
 }

@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=8" />
+    <link rel="stylesheet" href="css/styles.css?v=13" />
   </head>
   <body>
     <header class="site-header">
@@ -104,9 +104,26 @@
               </span>
             </a>
           </div>
-          <p class="hero-download">
-            <a href="#windows-msi" download>Download the Windows msi now</a>
-          </p>
+          <div class="platform-downloads">
+            <a class="platform-download" href="#windows-msi" download>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  fill="currentColor"
+                  d="M0 3.45 9.75 2.1v9.45H0V3.45zm10.95-1.6L24 0v11.55H10.95V1.85zM0 12.45l9.75 1.35V24H0v-11.55zm10.95 0H24V24l-13.05-1.85V12.45z"
+                />
+              </svg>
+              Download for Windows
+            </a>
+            <a class="platform-download" href="#mac-dmg" download>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  fill="currentColor"
+                  d="M16.37 12.23c.03 2.96 2.6 3.95 2.63 3.96-.02.07-.41 1.41-1.35 2.79-.81 1.19-1.66 2.38-2.99 2.41-1.31.02-1.73-.78-3.23-.78s-1.97.76-3.21.8c-1.29.04-2.27-1.29-3.1-2.47C3.36 16.3 2.1 12.5 3.68 9.9c.78-1.29 2.18-2.11 3.7-2.13 1.15-.02 2.24.78 2.95.78.7 0 2.02-.96 3.4-.82.58.02 2.21.23 3.26 1.77-.08.05-1.94 1.13-1.92 3.73zM14.3 5.72c.62-.75 1.04-1.8.92-2.84-.9.04-1.98.6-2.62 1.35-.58.67-1.08 1.74-.95 2.76 1 .08 2.03-.51 2.65-1.27z"
+                />
+              </svg>
+              Download for Mac
+            </a>
+          </div>
         </div>
         <p style="color: var(--ink-muted); margin-top: 0.5rem">
           Include your app version and platform (Windows or mobile) when you

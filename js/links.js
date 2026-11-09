@@ -6,6 +6,14 @@ window.MKG_LINKS = {
   windowsMsi:
     "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.32/MasterKeyGenie-0.1.32-x64.msi",
   /*
+   * Same GitHub Release host as the Windows installer. The signed disk image
+   * is not in this repo and is not attached to v0.1.32 yet. Upload
+   * MasterKeyGenie-0.1.32-universal.dmg to that release so this URL resolves:
+   * https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.32/MasterKeyGenie-0.1.32-universal.dmg
+   */
+  macDmg:
+    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.32/MasterKeyGenie-0.1.32-universal.dmg",
+  /*
    * Stripe Checkout is created by the Supabase function. The function holds
    * the Stripe secret. The anon key is the public client key, same as the apps.
    */
