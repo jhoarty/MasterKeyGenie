@@ -301,9 +301,11 @@ p:last-child {
   left: 3.5%;
   width: min(560px, 45%);
   min-width: 300px;
-  display: flex;
-  gap: 18px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px 18px;
   align-items: center;
+  container-type: inline-size;
   box-sizing: border-box;
   padding: 16px 20px 16px 16px;
   color: #fff;
@@ -323,20 +325,14 @@ p:last-child {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.mkg-trial:hover {
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 14px 42px rgba(0, 10, 50, 0.65), 0 0 52px rgba(58, 160, 255, 0.4);
-}
-
-.mkg-trial:focus-visible {
+.mkg-trial .platform-download:focus-visible {
   outline: 3px solid #ffe08a;
-  outline-offset: 3px;
+  outline-offset: 2px;
 }
 
 .mkg-seal {
-  flex: none;
-  width: clamp(96px, 28%, 132px);
+  grid-row: 1 / span 2;
+  width: clamp(96px, 28cqi, 132px);
   aspect-ratio: 1;
   rotate: -9deg;
   filter:
@@ -443,14 +439,20 @@ p:last-child {
   background: #2ed47a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%23062a18' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 100% no-repeat;
 }
 
-.mkg-cta {
-  display: inline-block;
-  padding: 9px 20px;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: clamp(14px, 1.4vw, 16px);
-  color: #04134a;
-  background: linear-gradient(180deg, #8fd0ff, #3aa0ff);
+.mkg-downloads {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.45rem;
+}
+
+.mkg-trial .platform-download {
+  width: 100%;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.92rem;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: none;
 }
 
 @media (max-width: 800px) {
@@ -469,21 +471,23 @@ p:last-child {
     order: 2;
     width: 100%;
     min-width: 0;
+    grid-template-columns: 1fr;
     padding: 14px 14px 14px 12px;
   }
 
   .mkg-seal {
-    width: 92px;
+    grid-row: auto;
+    width: 88px;
+  }
+
+  .mkg-downloads {
+    grid-column: 1;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .mkg-seal {
     animation: none;
-  }
-
-  .mkg-trial {
-    transition: none;
   }
 }
 
