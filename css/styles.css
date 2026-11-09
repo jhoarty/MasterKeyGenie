@@ -483,17 +483,31 @@ p:last-child {
     order: 2;
     width: 100%;
     min-width: 0;
-    grid-template-columns: 1fr;
-    padding: 14px 14px 14px 12px;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 8px 12px;
+    align-items: center;
+    padding: 12px;
   }
 
   .mkg-seal {
-    grid-row: auto;
-    width: 120px;
+    grid-column: 1;
+    grid-row: 1;
+    width: 108px;
+  }
+
+  .mkg-body {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .mkg-head {
+    margin-bottom: 6px;
   }
 
   .mkg-downloads {
-    grid-column: 1;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    gap: 0.4rem;
   }
 }
 
