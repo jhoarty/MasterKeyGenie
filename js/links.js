@@ -5,16 +5,13 @@ window.MKG_LINKS = {
     "https://play.google.com/store/apps/details?id=com.masterkeygenie.app&pcampaignid=web_share",
   windowsMsi:
     "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.33/MasterKeyGenie-0.1.33-x64.msi",
-  macDmg:
-    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.32/MasterKeyGenie-0.1.32-universal.dmg",
   /*
    * Same GitHub Release host as the Windows installer. The signed disk image
-   * is not in this repo and is not attached to v0.1.32 yet. Upload
-   * MasterKeyGenie-0.1.32-universal.dmg to that release so this URL resolves:
-   * https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.32/MasterKeyGenie-0.1.32-universal.dmg
+   * is not in this repo. Upload MasterKeyGenie-0.1.33-universal.dmg to the
+   * v0.1.33 release so this URL resolves.
    */
   macDmg:
-    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.32/MasterKeyGenie-0.1.32-universal.dmg",
+    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.33/MasterKeyGenie-0.1.33-universal.dmg",
   /*
    * Stripe Checkout is created by the Supabase function. The function holds
    * the Stripe secret. The anon key is the public client key, same as the apps.
