@@ -4,11 +4,10 @@ window.MKG_LINKS = {
   playStore:
     "https://play.google.com/store/apps/details?id=com.masterkeygenie.app&pcampaignid=web_share",
   windowsMsi:
-    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.34/MasterKeyGenie-0.1.34-x64.msi",
+    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.35/MasterKeyGenie-0.1.35-x64.msi",
   /*
    * Same GitHub Release host as the Windows installer. The signed disk image
-   * is not in this repo. Upload MasterKeyGenie-0.1.33-universal.dmg to the
-   * v0.1.33 release so this URL resolves.
+   * is not in this repo. Keep 0.1.33 until Mac ships a newer DMG.
    */
   macDmg:
     "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.33/MasterKeyGenie-0.1.33-universal.dmg",
