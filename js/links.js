@@ -4,7 +4,7 @@ window.MKG_LINKS = {
   playStore:
     "https://play.google.com/store/apps/details?id=com.masterkeygenie.app&pcampaignid=web_share",
   windowsMsi:
-    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.32/MasterKeyGenie-0.1.32-x64.msi",
+    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.33/MasterKeyGenie-0.1.33-x64.msi",
   macDmg:
     "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.32/MasterKeyGenie-0.1.32-universal.dmg",
   /*
