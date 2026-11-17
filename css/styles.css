@@ -1680,3 +1680,303 @@ p:last-child {
     width: 100%;
   }
 }
+
+/* —— Government Edition —— */
+body.gov {
+  --gov-navy: #07111f;
+  --gov-navy-2: #0d1c31;
+  --gov-ink: #e8eef4;
+  --gov-muted: #b7c3d0;
+  --gov-silver: #d5dde6;
+  --gov-emerald: #1fa971;
+  --gov-emerald-bright: #3ddea0;
+  background:
+    radial-gradient(70% 42% at 50% -8%, rgba(31, 169, 113, 0.2), transparent 58%),
+    radial-gradient(36% 28% at 100% 0%, rgba(213, 221, 230, 0.08), transparent 50%),
+    var(--gov-navy);
+  color: var(--gov-ink);
+}
+
+body.gov .site-header {
+  background: rgba(7, 17, 31, 0.9);
+  border-bottom: 1px solid rgba(213, 221, 230, 0.16);
+}
+
+body.gov .site-header.is-scrolled {
+  background: rgba(7, 17, 31, 0.96);
+  border-bottom-color: rgba(213, 221, 230, 0.28);
+}
+
+body.gov .gov-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: var(--gov-ink);
+}
+
+body.gov .gov-word {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+body.gov .gov-plate {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.28rem 0.85rem;
+  background: linear-gradient(180deg, #f7f9fb 0%, #d5dde6 42%, #9eacba 100%);
+  color: #0c2340;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 50%, calc(100% - 9px) 100%, 9px 100%, 0 50%);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+body.gov .nav-inner {
+  justify-content: flex-start;
+}
+
+body.gov .nav-links {
+  margin-left: auto;
+}
+
+body.gov .gov-local {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-left: 0.35rem;
+  padding: 0.28rem 0.7rem;
+  border: 1px solid rgba(61, 222, 160, 0.55);
+  border-radius: 999px;
+  color: var(--gov-emerald-bright);
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+body.gov .gov-local::before,
+body.gov .gov-local::after {
+  content: "";
+  width: 0.7rem;
+  height: 1px;
+  background: currentColor;
+}
+
+body.gov .nav-links a {
+  color: var(--gov-muted);
+}
+
+body.gov .nav-links a:hover,
+body.gov .nav-links a[aria-current="page"] {
+  color: var(--gov-ink);
+}
+
+body.gov .nav-toggle span {
+  background: var(--gov-silver);
+}
+
+.gov-hero {
+  padding: 2.5rem 0 3.5rem;
+}
+
+.gov-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 380px) minmax(0, 1fr);
+  gap: 2.5rem 3.5rem;
+  align-items: center;
+}
+
+.gov-mark {
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+    ellipse 78% 64% at 50% 58%,
+    rgba(244, 247, 251, 0.96) 0%,
+    rgba(216, 225, 233, 0.72) 46%,
+    rgba(7, 17, 31, 0) 72%
+  );
+}
+
+.gov-lockup {
+  width: min(100%, 420px);
+  margin-inline: auto;
+}
+
+.gov-kicker {
+  margin: 0 0 0.8rem;
+  color: var(--gov-emerald-bright);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+body.gov h1 {
+  color: var(--gov-ink);
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  max-width: 14ch;
+}
+
+.gov-statement {
+  margin: 1.25rem 0 0;
+  padding: 1rem 0 1rem 1.1rem;
+  border-left: 3px solid var(--gov-emerald);
+  color: var(--gov-silver);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  line-height: 1.45;
+  max-width: 38rem;
+}
+
+.gov-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.25rem;
+  align-items: center;
+  margin-top: 1.6rem;
+}
+
+body.gov .btn-emerald {
+  background: linear-gradient(180deg, #2fbf86 0%, #178a5c 100%);
+  color: #04140d;
+  box-shadow: 0 12px 28px rgba(31, 169, 113, 0.28);
+}
+
+body.gov .btn-emerald:hover {
+  color: #04140d;
+  background: linear-gradient(180deg, #49d29c 0%, #1a9a68 100%);
+}
+
+body.gov .btn-silver {
+  background: transparent;
+  color: var(--gov-silver);
+  border-color: rgba(213, 221, 230, 0.45);
+}
+
+body.gov .btn-silver:hover {
+  color: var(--gov-ink);
+  border-color: var(--gov-silver);
+}
+
+.gov-section {
+  padding: 0 0 4.5rem;
+}
+
+.gov-section h2 {
+  color: var(--gov-ink);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.gov-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.gov-card {
+  margin: 0;
+  padding: 1.25rem 1.2rem 1.15rem;
+  background:
+    linear-gradient(180deg, rgba(213, 221, 230, 0.08), rgba(213, 221, 230, 0.03));
+  border: 1px solid rgba(213, 221, 230, 0.2);
+  border-radius: 16px;
+}
+
+.gov-card h3 {
+  color: var(--gov-silver);
+  font-size: 1.15rem;
+}
+
+.gov-card p {
+  color: var(--gov-muted);
+  margin: 0;
+}
+
+.gov-note {
+  margin: 1.25rem 0 0;
+  max-width: 44rem;
+  color: var(--gov-muted);
+}
+
+body.gov .site-footer {
+  background: #050c16;
+  border-top-color: rgba(213, 221, 230, 0.16);
+}
+
+body.gov .footer-brand,
+body.gov .footer-meta,
+body.gov .footer-nav a {
+  color: var(--gov-muted);
+}
+
+body.gov .footer-nav a:hover,
+body.gov .footer-brand:hover {
+  color: var(--gov-ink);
+}
+
+.gov-pointer {
+  background:
+    radial-gradient(60% 80% at 0% 0%, rgba(31, 169, 113, 0.22), transparent 55%),
+    linear-gradient(90deg, #07111f, #10243d);
+  color: #e8eef4;
+  padding: 2.2rem 0;
+}
+
+.gov-pointer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+}
+
+.gov-pointer h2 {
+  color: #e8eef4;
+  margin: 0.15rem 0;
+}
+
+.gov-pointer p {
+  margin: 0;
+  color: #b7c3d0;
+}
+
+.gov-pointer .gov-kicker {
+  margin: 0;
+  color: #3ddea0;
+}
+
+.gov-pointer a.btn {
+  background: linear-gradient(180deg, #f7f9fb 0%, #d5dde6 100%);
+  color: #0c2340;
+}
+
+.gov-pointer a.btn:hover {
+  color: #0c2340;
+}
+
+@media (max-width: 900px) {
+  body.gov .gov-local,
+  body.gov .gov-plate {
+    display: none;
+  }
+
+  .gov-hero-grid,
+  .gov-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.gov .nav-links {
+    background: #0c1a2e;
+    border-bottom-color: rgba(213, 221, 230, 0.2);
+  }
+}

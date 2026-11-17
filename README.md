@@ -7,6 +7,7 @@ Static marketing website for **Master Key Genie** (Appfinity LLC). Designed for 
 | File | Purpose |
 |------|---------|
 | `index.html` | Homepage — hero, features, product visuals, store CTAs |
+| `government.html` | Government Edition — coming soon, project data stays on the device |
 | `about.html` | About Us |
 | `news.html` | News & Press (HTML press release + PDF) |
 | `privacy.html` | Privacy Policy |
