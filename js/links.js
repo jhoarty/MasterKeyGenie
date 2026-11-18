@@ -4,7 +4,7 @@ window.MKG_LINKS = {
   playStore:
     "https://play.google.com/store/apps/details?id=com.masterkeygenie.app&pcampaignid=web_share",
   windowsMsi:
-    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.37/MasterKeyGenie-0.1.37-x64.msi",
+    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.38/MasterKeyGenie-0.1.38-x64.msi",
   /*
    * Same GitHub Release host as the Windows installer. The signed disk image
    * is not in this repo.
