@@ -27,7 +27,7 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=21" />
+    <link rel="stylesheet" href="css/styles.css?v=22" />
   </head>
   <body>
     <header class="site-header">
@@ -393,29 +393,60 @@
             <h2>Shop</h2>
             <p class="plan-people">1 to 5 locksmiths</p>
             <p class="plan-price">$399<span>/year</span></p>
-            <button class="btn btn-primary" type="button" data-buy="shop_annual">
-              Buy
-            </button>
+            <div class="plan-actions">
+              <button class="btn btn-primary" type="button" data-buy="shop_annual">
+                Master Key Genie
+              </button>
+              <button class="btn btn-facilities" type="button" data-buy="shop_facilities">
+                Master Key Genie + Facilities Maintenance
+                <span class="plan-action-price">$598 / year</span>
+              </button>
+            </div>
           </article>
 
           <article class="plan-card">
             <h2>Crew</h2>
             <p class="plan-people">6 to 10 locksmiths</p>
             <p class="plan-price">$799<span>/year</span></p>
-            <button class="btn btn-primary" type="button" data-buy="crew_annual">
-              Buy
-            </button>
+            <div class="plan-actions">
+              <button class="btn btn-primary" type="button" data-buy="crew_annual">
+                Master Key Genie
+              </button>
+              <button class="btn btn-facilities" type="button" data-buy="crew_facilities">
+                Master Key Genie + Facilities Maintenance
+                <span class="plan-action-price">$998 / year</span>
+              </button>
+            </div>
           </article>
 
           <article class="plan-card">
             <h2>Organization</h2>
             <p class="plan-people">Unlimited locksmiths</p>
             <p class="plan-price">$1,499<span>/year</span></p>
-            <button class="btn btn-primary" type="button" data-buy="organization_annual">
-              Buy
-            </button>
+            <div class="plan-actions">
+              <button class="btn btn-primary" type="button" data-buy="organization_annual">
+                Master Key Genie
+              </button>
+              <button class="btn btn-facilities" type="button" data-buy="organization_facilities">
+                Master Key Genie + Facilities Maintenance
+                <span class="plan-action-price">$1,698 / year</span>
+              </button>
+            </div>
           </article>
 
+          </div>
+          <div class="addon-buy" id="facilities">
+            <div>
+              <h2>Facilities Maintenance</h2>
+              <p>
+                $199 per year, on a shop that already has Master Key Genie.
+                Buildings, Doors, and Key rings. One key covers the whole shop.
+              </p>
+            </div>
+            <button class="btn btn-facilities" type="button" data-buy="facilities">
+              Add Facilities Maintenance
+              <span class="plan-action-price">$199 / year</span>
+            </button>
           </div>
         </div>
       </section>

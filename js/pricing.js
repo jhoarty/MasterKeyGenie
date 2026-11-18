@@ -10,6 +10,9 @@
     shop_annual: "shop",
     crew_annual: "crew",
     organization_annual: "organization",
+    shop_facilities: "shop",
+    crew_facilities: "crew",
+    organization_facilities: "organization",
   };
 
   function showStatus(message) {
@@ -29,14 +32,23 @@
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      const tier = plans[button.getAttribute("data-buy")];
+      const kind = button.getAttribute("data-buy") || "";
+      const facilitiesOnly = kind === "facilities";
+      const tier = plans[kind];
       const quantityInput = document.getElementById("license-quantity");
       const quantity = quantityInput ? Number(quantityInput.value) : 1;
-      if (!tier) return;
+      if (!facilitiesOnly && !tier) return;
       if (!Number.isFinite(quantity) || quantity < 1 || quantity > 500) {
         showStatus("Quantity must be from 1 to 500. You have not been charged.");
         return;
       }
+      const payload = facilitiesOnly
+        ? { product: "facilities", quantity: Math.floor(quantity) }
+        : {
+            tier,
+            quantity: Math.floor(quantity),
+            facilities: kind.endsWith("_facilities"),
+          };
 
       buttons.forEach((item) => {
         item.disabled = true;
@@ -48,7 +60,7 @@
           apikey: anonKey,
           Authorization: `Bearer ${anonKey}`,
         },
-        body: JSON.stringify({ tier, quantity: Math.floor(quantity) }),
+        body: JSON.stringify(payload),
       })
         .then((response) =>
           response.json().then((body) => ({ ok: response.ok, body })),

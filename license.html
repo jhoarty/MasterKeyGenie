@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=12" />
+    <link rel="stylesheet" href="css/styles.css?v=22" />
   </head>
   <body>
     <header class="site-header">
@@ -94,6 +94,22 @@
         var anonKey = (window.MKG_LINKS && window.MKG_LINKS.supabaseAnonKey) || "";
         var attempts = 0;
 
+        function keyProductName(entry) {
+          var tierName =
+            entry.tier === "shop"
+              ? "Shop"
+              : entry.tier === "crew"
+                ? "Crew"
+                : entry.tier === "organization"
+                  ? "Organization"
+                  : "";
+          if (!tierName && entry.includesFacilities) return "Facilities Maintenance";
+          if (tierName && entry.includesFacilities) {
+            return tierName + " + Facilities Maintenance";
+          }
+          return tierName || "Master Key Genie";
+        }
+
         function say(message) {
           status.textContent = message;
         }
@@ -121,9 +137,20 @@
               var keys = (body && body.keys) || [];
               if (keys.length) {
                 list.innerHTML = "";
-                keys.forEach(function (key) {
+                keys.forEach(function (entry) {
                   var item = document.createElement("li");
-                  item.textContent = key;
+                  if (typeof entry === "string") {
+                    item.textContent = entry;
+                  } else {
+                    var label = document.createElement("span");
+                    label.className = "license-key-label";
+                    label.textContent = keyProductName(entry);
+                    var code = document.createElement("span");
+                    code.className = "license-key-code";
+                    code.textContent = entry.key || "";
+                    item.appendChild(label);
+                    item.appendChild(code);
+                  }
                   list.appendChild(item);
                 });
                 say(

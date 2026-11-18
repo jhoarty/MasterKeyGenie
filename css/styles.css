@@ -1465,6 +1465,77 @@ p:last-child {
   width: 100%;
 }
 
+.plan-actions {
+  margin-top: auto;
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--line, #d5d0c6);
+  border-radius: 16px;
+}
+
+.plan-card .plan-actions .btn {
+  margin-top: 0;
+}
+
+.btn-facilities {
+  background: #0f6e56;
+  color: #fff;
+  border: 0;
+}
+
+.btn-facilities:hover {
+  background: #0c5a46;
+}
+
+.plan-action-price {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.addon-buy {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid var(--line, #d5d0c6);
+  border-radius: 18px;
+}
+
+.addon-buy h2 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+}
+
+.addon-buy p {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--ink-muted);
+}
+
+.addon-buy .btn {
+  flex: 0 0 auto;
+  min-width: 16rem;
+}
+
+.license-key-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-body, inherit);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  color: var(--ink-muted);
+}
+
+.license-key-code {
+  display: block;
+}
+
 .pricing-status {
   margin: 0 0 1.5rem;
   padding: 1rem 1.15rem;
@@ -1599,6 +1670,16 @@ p:last-child {
   .shot-grid,
   .plan-grid {
     grid-template-columns: 1fr;
+  }
+
+  .addon-buy {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .addon-buy .btn {
+    min-width: 0;
+    width: 100%;
   }
 
   .device-frame {
