@@ -6,7 +6,7 @@
     <title>Government Edition &mdash; Master Key Genie</title>
     <meta
       name="description"
-      content="Master Key Genie Government Edition is coming soon. Master key systems design with project data stored exclusively on your device. No cloud storage. No device sync."
+      content="Master Key Genie Government Edition. $1,499 a year for up to 10 computers. Project data stays on the device. Facilities Maintenance is $399 a year."
     />
     <meta
       name="keywords"
@@ -19,7 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=21" />
+    <link rel="stylesheet" href="css/styles.css?v=23" />
   </head>
   <body class="gov">
     <header class="site-header">
@@ -40,6 +40,7 @@
         </button>
         <ul class="nav-links" id="site-nav">
           <li><a href="government.html" aria-current="page">This edition</a></li>
+          <li><a href="#buy">Pricing</a></li>
           <li><a href="index.html">Standard edition</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -59,18 +60,14 @@
             />
           </div>
           <div>
-            <p class="gov-kicker">Coming soon</p>
+            <p class="gov-kicker">Local data only</p>
             <h1>Your key systems. Your device. Your control.</h1>
             <p class="gov-statement">
               Master key systems design with project data stored exclusively on
               your device. No cloud storage. No device sync.
             </p>
             <div class="gov-actions">
-              <a
-                class="btn btn-emerald"
-                href="mailto:support@masterkeygenie.com?subject=Government%20Edition"
-                >Ask to be notified</a
-              >
+              <a class="btn btn-emerald" href="#buy">See pricing</a>
               <a class="btn btn-silver" href="index.html">Standard edition</a>
             </div>
           </div>
@@ -109,6 +106,69 @@
           </p>
         </div>
       </section>
+
+      <section class="gov-checkout" id="buy">
+        <div class="container page-plans">
+          <div class="license-qty">
+            <label for="license-quantity">Quantity</label>
+            <input
+              id="license-quantity"
+              type="number"
+              min="1"
+              max="500"
+              value="1"
+              inputmode="numeric"
+            />
+            <p>
+              Each key covers up to 10 computers. Those computers do not share
+              projects. The year starts the first time any of them activates
+              the key.
+            </p>
+          </div>
+          <p class="pricing-status" id="pricing-notice" role="status">
+            Online checkout is not connected yet. You have not been charged.
+            The prices below are the yearly plans.
+          </p>
+          <div class="plan-grid">
+            <article class="plan-card">
+              <h2>Government Edition</h2>
+              <p class="plan-people">Up to 10 computers</p>
+              <p class="plan-price">$1,499<span>/year</span></p>
+              <div class="plan-actions">
+                <button class="btn btn-primary" type="button" data-buy="government">
+                  Master Key Genie
+                </button>
+                <button
+                  class="btn btn-facilities"
+                  type="button"
+                  data-buy="government_facilities"
+                >
+                  Master Key Genie + Facilities Maintenance
+                  <span class="plan-action-price">$1,898 / year</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="addon-buy" id="facilities">
+            <div>
+              <h2>Facilities Maintenance</h2>
+              <p>
+                $399 per year, for computers that already have Government
+                Edition. Buildings, Doors, and Key rings. One key covers those
+                same installs.
+              </p>
+            </div>
+            <button
+              class="btn btn-facilities"
+              type="button"
+              data-buy="government_facilities_only"
+            >
+              Add Facilities Maintenance
+              <span class="plan-action-price">$399 / year</span>
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -133,7 +193,9 @@
       </div>
     </footer>
 
+    <script src="js/links.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/pricing.js"></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>

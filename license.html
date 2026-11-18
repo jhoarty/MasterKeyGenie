@@ -95,6 +95,13 @@
         var attempts = 0;
 
         function keyProductName(entry) {
+          if (entry.edition === "government") {
+            if (entry.facilitiesOnly) return "Facilities Maintenance";
+            if (entry.includesFacilities) {
+              return "Government Edition + Facilities Maintenance";
+            }
+            return "Government Edition";
+          }
           var tierName =
             entry.tier === "shop"
               ? "Shop"

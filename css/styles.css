@@ -1989,6 +1989,22 @@ body.gov .btn-silver:hover {
   color: var(--gov-muted);
 }
 
+.gov-checkout {
+  background: var(--surface);
+  color: var(--ink);
+  padding: 3.5rem 0 1rem;
+}
+
+.gov-checkout h2,
+.gov-checkout p,
+.gov-checkout label {
+  color: inherit;
+}
+
+body.gov .gov-checkout .plan-grid {
+  grid-template-columns: minmax(0, 28rem);
+}
+
 body.gov .site-footer {
   background: #050c16;
   border-top-color: rgba(213, 221, 230, 0.16);

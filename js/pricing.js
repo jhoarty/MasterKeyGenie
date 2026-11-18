@@ -34,21 +34,36 @@
     button.addEventListener("click", () => {
       const kind = button.getAttribute("data-buy") || "";
       const facilitiesOnly = kind === "facilities";
+      const government =
+        kind === "government" ||
+        kind === "government_facilities" ||
+        kind === "government_facilities_only";
       const tier = plans[kind];
       const quantityInput = document.getElementById("license-quantity");
       const quantity = quantityInput ? Number(quantityInput.value) : 1;
-      if (!facilitiesOnly && !tier) return;
+      if (!facilitiesOnly && !government && !tier) return;
       if (!Number.isFinite(quantity) || quantity < 1 || quantity > 500) {
         showStatus("Quantity must be from 1 to 500. You have not been charged.");
         return;
       }
-      const payload = facilitiesOnly
-        ? { product: "facilities", quantity: Math.floor(quantity) }
-        : {
-            tier,
-            quantity: Math.floor(quantity),
-            facilities: kind.endsWith("_facilities"),
-          };
+      const payload = government
+        ? kind === "government_facilities_only"
+          ? {
+              product: "government-facilities",
+              quantity: Math.floor(quantity),
+            }
+          : {
+              product: "government",
+              quantity: Math.floor(quantity),
+              facilities: kind === "government_facilities",
+            }
+        : facilitiesOnly
+          ? { product: "facilities", quantity: Math.floor(quantity) }
+          : {
+              tier,
+              quantity: Math.floor(quantity),
+              facilities: kind.endsWith("_facilities"),
+            };
 
       buttons.forEach((item) => {
         item.disabled = true;
