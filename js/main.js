@@ -14,6 +14,15 @@
         a.href = store.playStore;
       });
   }
+  if (store.governmentMsi) {
+    document
+      .querySelectorAll(
+        'a[href="#government-msi"], a[href="government.html#government-msi"]',
+      )
+      .forEach((a) => {
+        a.href = store.governmentMsi;
+      });
+  }
   if (store.windowsMsi) {
     document
       .querySelectorAll('a[href="#windows-msi"], a[href="index.html#windows-msi"]')
