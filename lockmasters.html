@@ -38,7 +38,20 @@
         </button>
         <ul class="nav-links" id="site-nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="offline.html">Offline</a></li>
+          <li class="nav-item has-submenu">
+            <button
+              type="button"
+              class="nav-submenu-toggle"
+              aria-expanded="false"
+              aria-controls="products-menu"
+            >
+              Products
+            </button>
+            <ul class="nav-submenu" id="products-menu">
+              <li><a href="index.html">Standard Edition</a></li>
+              <li><a href="offline.html">Offline Edition</a></li>
+            </ul>
+          </li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="news.html">News</a></li>

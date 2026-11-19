@@ -61,9 +61,51 @@
       a.addEventListener("click", () => {
         links.classList.remove("is-open");
         toggle.setAttribute("aria-expanded", "false");
+        links.querySelectorAll(".nav-item.has-submenu.is-open").forEach((item) => {
+          item.classList.remove("is-open");
+          const btn = item.querySelector(".nav-submenu-toggle");
+          if (btn) btn.setAttribute("aria-expanded", "false");
+        });
       });
     });
   }
+
+  document.querySelectorAll(".nav-item.has-submenu").forEach((item) => {
+    const button = item.querySelector(".nav-submenu-toggle");
+    if (!button) return;
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      const open = !item.classList.contains("is-open");
+      document.querySelectorAll(".nav-item.has-submenu.is-open").forEach((other) => {
+        if (other === item) return;
+        other.classList.remove("is-open");
+        const otherBtn = other.querySelector(".nav-submenu-toggle");
+        if (otherBtn) otherBtn.setAttribute("aria-expanded", "false");
+      });
+      item.classList.toggle("is-open", open);
+      button.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    if (target.closest(".nav-item.has-submenu")) return;
+    document.querySelectorAll(".nav-item.has-submenu.is-open").forEach((item) => {
+      item.classList.remove("is-open");
+      const btn = item.querySelector(".nav-submenu-toggle");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    document.querySelectorAll(".nav-item.has-submenu.is-open").forEach((item) => {
+      item.classList.remove("is-open");
+      const btn = item.querySelector(".nav-submenu-toggle");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    });
+  });
 
   const reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && reveals.length) {

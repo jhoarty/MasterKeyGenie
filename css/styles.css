@@ -167,6 +167,73 @@ p:last-child {
   color: var(--navy);
 }
 
+.nav-item.has-submenu {
+  position: relative;
+}
+
+.nav-submenu-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 560;
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+}
+
+.nav-submenu-toggle::after {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-1px);
+  opacity: 0.8;
+}
+
+.nav-submenu-toggle:hover,
+.nav-item.has-submenu.is-open > .nav-submenu-toggle {
+  color: var(--navy);
+}
+
+.nav-submenu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  left: 0;
+  min-width: 12.5rem;
+  margin: 0;
+  padding: 0.45rem 0;
+  list-style: none;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 14px 36px rgba(11, 37, 69, 0.12);
+  z-index: 30;
+}
+
+.nav-item.has-submenu:hover > .nav-submenu,
+.nav-item.has-submenu:focus-within > .nav-submenu,
+.nav-item.has-submenu.is-open > .nav-submenu {
+  display: block;
+}
+
+.nav-submenu a {
+  display: block;
+  padding: 0.55rem 0.9rem;
+  white-space: nowrap;
+}
+
+.nav-submenu a:hover,
+.nav-submenu a[aria-current="page"] {
+  color: var(--navy);
+  background: rgba(27, 168, 232, 0.08);
+}
+
 .nav-toggle {
   display: none;
   border: 0;
@@ -1732,6 +1799,41 @@ p:last-child {
 
   .nav-links a {
     padding: 0.75rem 0.25rem;
+  }
+
+  .nav-item.has-submenu {
+    width: 100%;
+  }
+
+  .nav-submenu-toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.75rem 0.25rem;
+  }
+
+  .nav-submenu {
+    position: static;
+    display: none;
+    min-width: 0;
+    margin: 0 0 0.35rem;
+    padding: 0 0 0.35rem 0.85rem;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .nav-item.has-submenu:hover > .nav-submenu,
+  .nav-item.has-submenu:focus-within > .nav-submenu {
+    display: none;
+  }
+
+  .nav-item.has-submenu.is-open > .nav-submenu {
+    display: block;
+  }
+
+  .nav-submenu a {
+    padding: 0.55rem 0.25rem;
   }
 }
 
