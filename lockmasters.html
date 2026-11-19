@@ -92,7 +92,11 @@
             value="1"
             inputmode="numeric"
           />
-          <p>Each key activates one shop. The year starts when that shop redeems it.</p>
+          <p>
+            Shop, Crew, and Organization each activate one shop. Offline
+            Edition licenses one computer. The year starts when that key is
+            redeemed.
+          </p>
         </div>
         <p class="pricing-status" id="pricing-notice" role="status" hidden>
           This checkout is not open yet. You have not been charged.
@@ -124,6 +128,44 @@
               Continue
             </button>
           </article>
+        </div>
+        <div class="plan-grid" style="margin-top: 1.25rem">
+          <article class="plan-card">
+            <h2>Offline Edition</h2>
+            <p class="plan-people">Single user license</p>
+            <p class="plan-price">$299<span>/year</span></p>
+            <div class="plan-actions">
+              <button class="btn btn-primary" type="button" data-buy="government">
+                Master Key Genie
+              </button>
+              <button
+                class="btn btn-facilities"
+                type="button"
+                data-buy="government_facilities"
+              >
+                Master Key Genie + Facilities Maintenance
+                <span class="plan-action-price">$448 / year</span>
+              </button>
+            </div>
+          </article>
+        </div>
+        <div class="addon-buy">
+          <div>
+            <h2>Facilities Maintenance</h2>
+            <p>
+              $149 per year add-on, for a computer that already has Offline
+              Edition. Buildings, Doors, and Key rings. One key covers that
+              same install.
+            </p>
+          </div>
+          <button
+            class="btn btn-facilities"
+            type="button"
+            data-buy="government_facilities_only"
+          >
+            Add Facilities Maintenance
+            <span class="plan-action-price">$149 / year</span>
+          </button>
         </div>
       </div>
     </main>

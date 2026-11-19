@@ -37,12 +37,17 @@
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      const tier = plans[button.getAttribute("data-buy")];
+      const kind = button.getAttribute("data-buy") || "";
+      const tier = plans[kind];
+      const offline =
+        kind === "government" ||
+        kind === "government_facilities" ||
+        kind === "government_facilities_only";
       const quantityInput = document.getElementById("license-quantity");
       const codeInput = document.getElementById("lockmasters-code");
       const quantity = quantityInput ? Number(quantityInput.value) : 1;
       const code = codeInput ? String(codeInput.value || "").trim() : "";
-      if (!tier) return;
+      if (!offline && !tier) return;
       if (!code) {
         showStatus("Enter the checkout code. You have not been charged.");
         return;
@@ -51,6 +56,24 @@
         showStatus("Quantity must be from 1 to 500. You have not been charged.");
         return;
       }
+      const payload = offline
+        ? kind === "government_facilities_only"
+          ? {
+              product: "government-facilities",
+              quantity: Math.floor(quantity),
+              code,
+            }
+          : {
+              product: "government",
+              quantity: Math.floor(quantity),
+              facilities: kind === "government_facilities",
+              code,
+            }
+        : {
+            tier,
+            quantity: Math.floor(quantity),
+            code,
+          };
 
       setButtonsDisabled(true);
       fetch(checkoutUrl, {
@@ -60,11 +83,7 @@
           apikey: anonKey,
           Authorization: `Bearer ${anonKey}`,
         },
-        body: JSON.stringify({
-          tier,
-          quantity: Math.floor(quantity),
-          code,
-        }),
+        body: JSON.stringify(payload),
       })
         .then((response) =>
           response.json().then((body) => ({ ok: response.ok, body })),
