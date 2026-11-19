@@ -5,9 +5,8 @@ window.MKG_LINKS = {
     "https://play.google.com/store/apps/details?id=com.masterkeygenie.app&pcampaignid=web_share",
   windowsMsi:
     "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.41/MasterKeyGenie-0.1.41-x64.msi",
-  /* Installer filename still says Government so older copies can find the update. */
   offlineMsi:
-    "https://github.com/jhoarty/MasterKeyGenie/releases/download/government-v0.1.41/MasterKeyGenie-Government-0.1.41-x64.msi",
+    "https://github.com/jhoarty/MasterKeyGenie/releases/download/offline-v0.1.41/MasterKeyGenie-Offline-0.1.41-x64.msi",
   /*
    * Same GitHub Release host as the Windows installer. The signed disk image
    * is not in this repo.
