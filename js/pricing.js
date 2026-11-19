@@ -30,6 +30,17 @@
   }
   if (notice) notice.hidden = true;
 
+  function setButtonsDisabled(disabled) {
+    buttons.forEach((item) => {
+      item.disabled = disabled;
+    });
+  }
+
+  // Back/forward cache keeps disabled buttons after Stripe; re-enable on return.
+  window.addEventListener("pageshow", () => {
+    setButtonsDisabled(false);
+  });
+
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const kind = button.getAttribute("data-buy") || "";
@@ -65,9 +76,7 @@
               facilities: kind.endsWith("_facilities"),
             };
 
-      buttons.forEach((item) => {
-        item.disabled = true;
-      });
+      setButtonsDisabled(true);
       fetch(checkoutUrl, {
         method: "POST",
         headers: {
@@ -85,18 +94,14 @@
             window.location.assign(result.body.url);
             return;
           }
-          buttons.forEach((item) => {
-            item.disabled = false;
-          });
+          setButtonsDisabled(false);
           showStatus(
             (result.body && result.body.error) ||
               "Online checkout is not connected yet. You have not been charged.",
           );
         })
         .catch(() => {
-          buttons.forEach((item) => {
-            item.disabled = false;
-          });
+          setButtonsDisabled(false);
           showStatus(
             "Online checkout is not connected yet. You have not been charged.",
           );

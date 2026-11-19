@@ -25,6 +25,16 @@
   }
   if (notice) notice.hidden = true;
 
+  function setButtonsDisabled(disabled) {
+    buttons.forEach((item) => {
+      item.disabled = disabled;
+    });
+  }
+
+  window.addEventListener("pageshow", () => {
+    setButtonsDisabled(false);
+  });
+
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const tier = plans[button.getAttribute("data-buy")];
@@ -42,9 +52,7 @@
         return;
       }
 
-      buttons.forEach((item) => {
-        item.disabled = true;
-      });
+      setButtonsDisabled(true);
       fetch(checkoutUrl, {
         method: "POST",
         headers: {
@@ -66,18 +74,14 @@
             window.location.assign(result.body.url);
             return;
           }
-          buttons.forEach((item) => {
-            item.disabled = false;
-          });
+          setButtonsDisabled(false);
           showStatus(
             (result.body && result.body.error) ||
               "Checkout could not be started. You have not been charged.",
           );
         })
         .catch(() => {
-          buttons.forEach((item) => {
-            item.disabled = false;
-          });
+          setButtonsDisabled(false);
           showStatus(
             "This checkout is not open yet. You have not been charged.",
           );
