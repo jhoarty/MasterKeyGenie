@@ -32,7 +32,7 @@
         </button>
         <ul class="nav-links" id="site-nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="government.html">Government</a></li>
+          <li><a href="offline.html">Offline</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="news.html">News</a></li>
@@ -99,9 +99,9 @@
           if (entry.edition === "government") {
             if (entry.facilitiesOnly) return "Facilities Maintenance";
             if (entry.includesFacilities) {
-              return "Government Edition + Facilities Maintenance";
+              return "Offline Edition + Facilities Maintenance";
             }
-            return "Government Edition";
+            return "Offline Edition";
           }
           var tierName =
             entry.tier === "shop"

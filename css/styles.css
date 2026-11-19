@@ -1762,7 +1762,7 @@ p:last-child {
   }
 }
 
-/* —— Government Edition —— */
+/* —— Offline Edition (page still uses .gov CSS class names) —— */
 body.gov {
   --gov-navy: #07111f;
   --gov-navy-2: #0d1c31;

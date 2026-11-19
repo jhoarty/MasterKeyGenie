@@ -14,13 +14,14 @@
         a.href = store.playStore;
       });
   }
-  if (store.governmentMsi) {
+  const offlineInstaller = store.offlineMsi || store.governmentMsi;
+  if (offlineInstaller) {
     document
       .querySelectorAll(
-        'a[href="#government-msi"], a[href="government.html#government-msi"]',
+        'a[href="#offline-msi"], a[href="offline.html#offline-msi"], a[href="#government-msi"], a[href="government.html#government-msi"], a[href="offline.html#government-msi"]',
       )
       .forEach((a) => {
-        a.href = store.governmentMsi;
+        a.href = offlineInstaller;
       });
   }
   if (store.windowsMsi) {
