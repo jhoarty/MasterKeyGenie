@@ -106,27 +106,45 @@
             <h2>Shop</h2>
             <p class="plan-people">1 to 5 locksmiths</p>
             <p class="plan-price">$399<span>/year</span></p>
-            <button class="btn btn-primary" type="button" data-buy="shop_annual">
-              Continue
-            </button>
+            <div class="plan-actions">
+              <button class="btn btn-primary" type="button" data-buy="shop_annual">
+                Master Key Genie
+              </button>
+              <button class="btn btn-facilities" type="button" data-buy="shop_facilities">
+                Master Key Genie + Facilities Maintenance
+                <span class="plan-action-price">$598 / year</span>
+              </button>
+            </div>
           </article>
 
           <article class="plan-card">
             <h2>Crew</h2>
             <p class="plan-people">6 to 10 locksmiths</p>
             <p class="plan-price">$799<span>/year</span></p>
-            <button class="btn btn-primary" type="button" data-buy="crew_annual">
-              Continue
-            </button>
+            <div class="plan-actions">
+              <button class="btn btn-primary" type="button" data-buy="crew_annual">
+                Master Key Genie
+              </button>
+              <button class="btn btn-facilities" type="button" data-buy="crew_facilities">
+                Master Key Genie + Facilities Maintenance
+                <span class="plan-action-price">$998 / year</span>
+              </button>
+            </div>
           </article>
 
           <article class="plan-card">
             <h2>Organization</h2>
             <p class="plan-people">Unlimited locksmiths</p>
             <p class="plan-price">$1,499<span>/year</span></p>
-            <button class="btn btn-primary" type="button" data-buy="organization_annual">
-              Continue
-            </button>
+            <div class="plan-actions">
+              <button class="btn btn-primary" type="button" data-buy="organization_annual">
+                Master Key Genie
+              </button>
+              <button class="btn btn-facilities" type="button" data-buy="organization_facilities">
+                Master Key Genie + Facilities Maintenance
+                <span class="plan-action-price">$1,698 / year</span>
+              </button>
+            </div>
           </article>
         </div>
         <div class="plan-grid" style="margin-top: 1.25rem">
@@ -151,11 +169,23 @@
         </div>
         <div class="addon-buy">
           <div>
-            <h2>Facilities Maintenance</h2>
+            <h2>Standard Facilities Maintenance</h2>
             <p>
-              $149 per year add-on, for a computer that already has Offline
-              Edition. Buildings, Doors, and Key rings. One key covers that
-              same install.
+              $199 per year, on a shop that already has Master Key Genie.
+              Buildings, Doors, and Key rings. One key covers the whole shop.
+            </p>
+          </div>
+          <button class="btn btn-facilities" type="button" data-buy="facilities">
+            Add Standard Facilities Maintenance
+            <span class="plan-action-price">$199 / year</span>
+          </button>
+        </div>
+        <div class="addon-buy">
+          <div>
+            <h2>Offline Facilities Maintenance</h2>
+            <p>
+              $149 per year, for a computer that already has Offline Edition.
+              Buildings, Doors, and Key rings. One key covers that same install.
             </p>
           </div>
           <button
@@ -163,7 +193,7 @@
             type="button"
             data-buy="government_facilities_only"
           >
-            Add Facilities Maintenance
+            Add Offline Facilities Maintenance
             <span class="plan-action-price">$149 / year</span>
           </button>
         </div>

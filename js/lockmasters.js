@@ -10,6 +10,9 @@
     shop_annual: "shop",
     crew_annual: "crew",
     organization_annual: "organization",
+    shop_facilities: "shop",
+    crew_facilities: "crew",
+    organization_facilities: "organization",
   };
 
   function showStatus(message) {
@@ -39,6 +42,7 @@
     button.addEventListener("click", () => {
       const kind = button.getAttribute("data-buy") || "";
       const tier = plans[kind];
+      const facilitiesOnly = kind === "facilities";
       const offline =
         kind === "government" ||
         kind === "government_facilities" ||
@@ -47,7 +51,7 @@
       const codeInput = document.getElementById("lockmasters-code");
       const quantity = quantityInput ? Number(quantityInput.value) : 1;
       const code = codeInput ? String(codeInput.value || "").trim() : "";
-      if (!offline && !tier) return;
+      if (!offline && !facilitiesOnly && !tier) return;
       if (!code) {
         showStatus("Enter the checkout code. You have not been charged.");
         return;
@@ -69,11 +73,18 @@
               facilities: kind === "government_facilities",
               code,
             }
-        : {
-            tier,
-            quantity: Math.floor(quantity),
-            code,
-          };
+        : facilitiesOnly
+          ? {
+              product: "facilities",
+              quantity: Math.floor(quantity),
+              code,
+            }
+          : {
+              tier,
+              quantity: Math.floor(quantity),
+              facilities: kind.endsWith("_facilities"),
+              code,
+            };
 
       setButtonsDisabled(true);
       fetch(checkoutUrl, {
