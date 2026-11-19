@@ -12,7 +12,7 @@ window.MKG_LINKS = {
    * is not in this repo.
    */
   macDmg:
-    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.39/MasterKeyGenie-0.1.39-universal.dmg",
+    "https://github.com/jhoarty/MasterKeyGenie/releases/download/v0.1.41/MasterKeyGenie-0.1.41-universal.dmg",
   /*
    * Stripe Checkout is created by the Supabase function. The function holds
    * the Stripe secret. The anon key is the public client key, same as the apps.
