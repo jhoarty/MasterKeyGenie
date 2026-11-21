@@ -1358,6 +1358,98 @@ p:last-child {
   margin-top: 2.25rem;
 }
 
+/* —— Blog —— */
+.blog-list {
+  max-width: 44rem;
+  padding-bottom: 4rem;
+}
+
+.blog-item {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.blog-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.blog-meta {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sky);
+}
+
+.blog-meta a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.blog-meta a:hover {
+  color: var(--navy);
+}
+
+.blog-item h2 {
+  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+  margin: 0 0 0.55rem;
+  line-height: 1.2;
+}
+
+.blog-item h2 a {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.blog-item h2 a:hover {
+  color: var(--sky);
+}
+
+.blog-item p {
+  color: var(--ink-muted);
+  margin: 0 0 0.75rem;
+}
+
+.blog-read {
+  font-family: var(--font-display);
+  font-weight: 650;
+  color: var(--navy);
+  text-underline-offset: 0.18em;
+}
+
+.blog-post {
+  padding-top: 2.5rem;
+}
+
+.blog-post h1 {
+  font-size: clamp(1.85rem, 3.6vw, 2.55rem);
+  margin: 0 0 0.75rem;
+  line-height: 1.12;
+}
+
+.blog-deck {
+  font-size: 1.15rem;
+  color: var(--ink-muted);
+  margin-bottom: 1.5rem;
+}
+
+.blog-back {
+  margin-top: 1.5rem;
+}
+
+.blog-back a {
+  font-family: var(--font-display);
+  font-weight: 650;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.blog-back a:hover {
+  color: var(--sky);
+}
+
 .contact-panel {
   display: grid;
   gap: 1.5rem;

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog &mdash; Master Key Genie</title>
+    <meta
+      name="description"
+      content="Practical notes on master key systems, offline shop work, and Master Key Genie—from Appfinity LLC."
+    />
+    <meta
+      name="keywords"
+      content="locksmith blog, master key systems, offline locksmith software, Master Key Genie"
+    />
+    <link rel="icon" href="../assets/favicon.png?v=20260808" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css?v=25" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-inner">
+        <a class="brand-lockup" href="../index.html" aria-label="Master Key Genie home">
+          <img src="../assets/brand-mark.png?v=20260808" alt="" width="58" height="58" />
+          <span>Master Key <span class="genie">Genie</span></span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="site-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li class="nav-item has-submenu">
+            <button
+              type="button"
+              class="nav-submenu-toggle"
+              aria-expanded="false"
+              aria-controls="products-menu"
+            >
+              Products
+            </button>
+            <ul class="nav-submenu" id="products-menu">
+              <li><a href="../index.html">Standard Edition</a></li>
+              <li><a href="../offline.html">Offline Edition</a></li>
+            </ul>
+          </li>
+          <li><a href="../pricing.html">Pricing</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../news.html">News</a></li>
+          <li><a href="./" aria-current="page">Blog</a></li>
+          <li><a href="../privacy.html">Privacy</a></li>
+          <li><a href="../terms.html">Terms</a></li>
+          <li><a href="../contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="sky-wash">
+      <div class="container page-hero">
+        <h1>Blog</h1>
+        <p>
+          Practical notes for locksmiths on master key work, shop workflows, and
+          staying productive when the network will not.
+        </p>
+      </div>
+
+      <div class="container blog-list">
+        <article class="blog-item">
+          <p class="blog-meta">
+            <time datetime="2026-11-21">November 21, 2026</time>
+          </p>
+          <h2>
+            <a href="why-offline-still-matters.html"
+              >Why offline still matters when you are cutting keys on site</a
+            >
+          </h2>
+          <p>
+            Basements, vans, and unfinished buildings are where master key work
+            often happens—and where Wi-Fi is a rumor. Here is why local project
+            data still earns its keep.
+          </p>
+          <p>
+            <a class="blog-read" href="why-offline-still-matters.html"
+              >Read the post</a
+            >
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="footer-brand" href="../index.html">
+            <img src="../assets/brand-mark.png?v=20260808" alt="" width="58" height="58" />
+            <span>Master Key <span class="genie">Genie</span></span>
+          </a>
+          <div class="footer-meta">
+            &copy; <span id="year"></span> Appfinity LLC
+          </div>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="../offline.html">Offline Edition</a></li>
+          <li><a href="../pricing.html">Pricing</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../news.html">News</a></li>
+          <li><a href="./">Blog</a></li>
+          <li><a href="../privacy.html">Privacy</a></li>
+          <li><a href="../terms.html">Terms</a></li>
+          <li><a href="../contact.html">Contact Us</a></li>
+          <li>
+            <a href="mailto:support@masterkeygenie.com">support@masterkeygenie.com</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="../js/links.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

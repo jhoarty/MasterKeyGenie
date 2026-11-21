@@ -11,8 +11,16 @@ Static marketing website for **Master Key Genie** (Appfinity LLC). Designed for 
 | `government.html` | Redirects to `offline.html` |
 | `about.html` | About Us |
 | `news.html` | News & Press (HTML press release + PDF) |
+| `blog/` | Blog index and posts (static HTML, no comments) |
 | `privacy.html` | Privacy Policy |
 | `contact.html` | Contact (`support@masterkeygenie.com`) |
+
+### Publishing a blog post
+
+1. Add `blog/your-slug.html` using an existing post as the template.
+2. Add a short entry to the list in `blog/index.html` (date, title, excerpt, link).
+3. Keep tone practical for locksmiths; end with CTAs (Offline Edition, Pricing, Contact).
+4. No comments—use Contact for replies.
 
 ## Local preview
 
